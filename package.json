@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "clean-deploy": "git push origin --delete gh-pages 2>nul || true && npm run deploy",
-    "deploy": "gh-pages -d dist --repo https://github.com/kintwadi/frei-kirche-base --branch gh-pages"
+    "deploy": "gh-pages -d dist --repo https://x-access-token:GIT_ACCESS-KEY@github.com/kintwadi/frei-kirche-base.git --branch gh-pages"
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.0",
