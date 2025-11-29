@@ -79,6 +79,7 @@ export interface Content {
     title: string;
     latestTitle: string;
     latestDate: string;
+    latestDesc: string;
     listen: string;
     download: string;
   };
