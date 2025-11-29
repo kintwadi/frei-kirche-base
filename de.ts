@@ -99,6 +99,7 @@ export const de: Content = {
     title: "Aktuelle Predigten",
     latestTitle: "Frieden im Chaos finden",
     latestDate: "Aufgenommen am letzten Sonntag",
+    latestDesc: "Basierend auf Philipper 4,6–7. Eine Botschaft darüber, den Frieden Gottes zu finden, der allen Verstand übersteigt.",
     listen: "Jetzt anhören",
     download: "Notizen herunterladen (DE/EN)"
   },

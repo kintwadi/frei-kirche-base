@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logoUrl from '../images/logo.jpg';
 
 const Logo: React.FC<{ className?: string }> = ({ className }) => {
   const [error, setError] = useState(false);
@@ -31,7 +32,7 @@ const Logo: React.FC<{ className?: string }> = ({ className }) => {
 
   return (
     <img 
-      src="/images/logo.jpg" 
+      src={logoUrl} 
       alt="Ev. Freikirche Groß-Gerau Logo" 
       onError={() => setError(true)}
       className={`object-contain bg-white p-1 rounded-2xl ${className}`}

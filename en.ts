@@ -101,6 +101,7 @@ export const en: Content = {
     title: "Latest Sermons",
     latestTitle: "Finding Peace in Chaos",
     latestDate: "Recorded last Sunday",
+    latestDesc: "Based on Philippians 4:6–7. A message about finding the peace of God that surpasses all understanding.",
     listen: "Listen Now",
     download: "Download Notes (EN/DE)"
   },
