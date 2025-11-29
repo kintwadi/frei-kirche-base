@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base  : 'frei-kirche-base',
+  base: '/frei-kirche-base/',
 })
