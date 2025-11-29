@@ -180,7 +180,7 @@ const GetInvolved: React.FC<GetInvolvedProps> = ({ content }) => {
               <div className="bg-white p-2 border-2 border-navy/10 rounded-xl inline-block mb-6 shadow-inner">
                 {/* QR Code Placeholder using API */}
                 <img 
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/?text=Hi%2C%20I%20would%20like%20to%20join%20the%20${encodeURIComponent(selectedGroup.name)}%20group!&color=2C3E50`} 
+                  src={`https://call.whatsapp.com/voice/ArNvR1YQLYEcXoJ1uAJzp2${encodeURIComponent(selectedGroup.name)}%20group!&color=2C3E50`}
                   alt="QR Code" 
                   className="w-48 h-48"
                 />
