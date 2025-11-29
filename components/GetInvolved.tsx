@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { Content, Group } from '../types';
 import Section from './Section';
 import { Calendar, Users, ChevronLeft, ChevronRight, X, MessageCircle } from 'lucide-react';
+const qrCodeUrls = Object.entries(import.meta.glob('../qrcodes/*.png', { eager: true, as: 'url' }))
+  .sort(([a], [b]) => a.localeCompare(b))
+  .map(([, url]) => url as string);
 
 interface GetInvolvedProps {
   content: Content['involved'];
@@ -12,6 +15,13 @@ const GetInvolved: React.FC<GetInvolvedProps> = ({ content }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedGroup, setSelectedGroup] = useState<Group | null>(null);
   const [cardsToShow, setCardsToShow] = useState(1);
+  const getQrForGroup = (group: Group | null) => {
+    const list = qrCodeUrls;
+    if (list.length === 0) return '';
+    if (!group) return list[0];
+    const idx = content.groups.findIndex((g) => g.id === group.id);
+    return list[Math.max(0, idx) % list.length];
+  };
 
   // Responsive slides count
   useEffect(() => {
@@ -180,7 +190,7 @@ const GetInvolved: React.FC<GetInvolvedProps> = ({ content }) => {
               <div className="bg-white p-2 border-2 border-navy/10 rounded-xl inline-block mb-6 shadow-inner">
                 {/* QR Code Placeholder using API */}
                 <img 
-                  src={`https://call.whatsapp.com/voice/ArNvR1YQLYEcXoJ1uAJzp2${encodeURIComponent(selectedGroup.name)}%20group!&color=2C3E50`}
+                  src={getQrForGroup(selectedGroup)}
                   alt="QR Code" 
                   className="w-48 h-48"
                 />
