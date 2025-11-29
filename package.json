@@ -1,0 +1,33 @@
+{
+  "name": "ev-freikirche-gross-gerau",
+  "private": true,
+  "homepage": "https://kintwadi.github.io/frei-kirche-base/",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "clean-deploy": "git push origin --delete gh-pages 2>nul || true && npm run deploy",
+    "deploy": "gh-pages -d dist --repo https://github.com/kintwadi/frei-kirche-base --branch gh-pages"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.0.0",
+    "@fontsource/lora": "^5.0.0",
+    "lucide-react": "^0.344.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^18.2.64",
+    "@types/react-dom": "^18.2.21",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.18",
+    "gh-pages": "^6.3.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4"
+  }
+}
