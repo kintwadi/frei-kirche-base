@@ -3,7 +3,7 @@ import { Content } from '../types';
 import Section from './Section';
 import { Play, Download, Mic, Square } from 'lucide-react';
 import AudioPlayer from './AudioPlayer';
-import sermonAudioUrl from '../audio/sermon-latest.mp3';
+import sermonAudioUrl from '../audio/sermon-lastest.mp3';
 
 interface SermonsProps {
   content: Content['sermons'];
